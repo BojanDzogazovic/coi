@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="headline">--- Task 1 ---</h1>
+    <div class="section">
+      <!-- Using <picture> to load smaller image for 375px/mobile up to 640px and larger image for 1440px/desktop, above 640px-->
+      <picture class="section__picture">
+        <source media="(max-width: 640px)" srcset="images/section_mobile.png" />
+        <source
+          media="(min-width: 641px)"
+          srcset="images/section_desktop.png"
+        />
+        <img
+          class="section__image"
+          src="images/section.png"
+          alt="Model with bag"
+        />
+      </picture>
+      <div class="section__text">
+        <h3 class="section__title">Handcrafted and Responsibly Sourced</h3>
+        <p class="section__content">
+          On the other hand, we denounce with righteous indignation and dislike
+          men who are so beguiled and demoralized by the charms of pleasure of
+          the moment, so blinded by desire, that they cannot foresee the pain
+          and trouble that are bound to ensue; and equal blame belongs to those
+          who fail in their duty through weakness of will, which is the same as
+          saying through shrinking from toil and pain.
+        </p>
+        <p
+          id="hidden_content"
+          class="section__content section__content--hidden"
+        >
+          On the other hand, we denounce with righteous indignation and dislike
+          men who are so beguiled and demoralized by the charms of pleasure of
+          the moment, so blinded by desire, that they cannot foresee the pain
+          and trouble that are bound to ensue; and equal blame belongs to those
+          who fail in their duty through weakness of will, which is the same as
+          saying through shrinking from toil and pain.
+        </p>
+        <button id="load_more" class="section__button">Learn more</button>
+      </div>
+    </div>
+    <h1 class="headline">--- Task 2 ---</h1>
+    <div class="blog">
+      <h1 class="blog__title">Our Recipes</h1>
+      <p class="blog__subtitle">
+        Great on its own or as a mixer. Fun cocktail & mocktail recipes to try.
+      </p>
+      <button class="blog__view_all">View All Recipes</button>
+      <div class="blog__posts">
+        <div class="blog__post">
+          <div class="blog__box">
+            <img
+              class="blog__pattern blog__pattern_t_l"
+              src="images/pattern_top_left.png"
+              alt="pattern_top_left"
+            />
+            <img
+              class="blog__image"
+              src="images/blog_1.png"
+              alt="blog 1 image"
+            />
+          </div>
+          <h3 class="blog__post_title">
+            Sparkling Triple Citrus & Mint Mocktail
+          </h3>
+        </div>
+        <div class="blog__post">
+          <div class="blog__box">
+            <img
+              class="blog__pattern blog__pattern_t_r"
+              src="images/pattern_top_right.png"
+              alt="pattern_top_right"
+            />
+            <img
+              class="blog__image"
+              src="images/blog_2.png"
+              alt="blog 2 image"
+            />
+            <img
+              class="blog__pattern blog__pattern_b_l"
+              src="images/pattern_bottom_left.png"
+              alt="pattern_bottom_left"
+            />
+          </div>
+          <h3 class="blog__post_title">
+            Sparkling Triple Citrus & Mint Mocktail
+          </h3>
+        </div>
+        <div class="blog__post">
+          <div class="blog__box">
+            <img
+              class="blog__image"
+              src="images/blog_3.png"
+              alt="blog 3 image"
+            />
+            <img
+              class="blog__pattern blog__pattern_b_r"
+              src="images/pattern_bottom_right.png"
+              alt="pattern_bottom_right"
+            />
+          </div>
+          <h3 class="blog__post_title">
+            Sparkling Triple Citrus & Mint Mocktail
+          </h3>
+        </div>
+      </div>
+    </div>
+    <h1 class="headline">--- Task 3 ---</h1>
+    <h1 class="headline">
+      Your country of residence is: <span id="country_placeholder"></span>
+    </h1>
+    <script src="script.js"></script>
+  </body>
+</html>

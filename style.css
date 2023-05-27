@@ -1,0 +1,303 @@
+/* General styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Fira+Sans:wght@300;500&family=Rajdhani&display=swap");
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headline {
+  font-weight: bold;
+  margin: 50px 0 50px 15px;
+}
+
+/* First task styles */
+
+.section {
+  background-color: #e3cfcf;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.section__picture {
+  flex: 1;
+}
+
+.section__image {
+  width: 100%;
+  height: 100%;
+}
+
+.section__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 62.5px 0;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 275;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 0 50px;
+  margin: 0 0 16px 0;
+}
+
+.section__content {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 0 16px;
+  margin: 0 0 20px 0;
+}
+
+.section__content--hidden {
+  display: none;
+}
+
+.section__content--show {
+  display: block;
+  animation: fadeIn ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.section__button {
+  color: #000;
+  border: 1px solid #000;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 15px 25px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* I have estimated that 1040px is most optimal breakpoint to ensure 375px design and above that, and 1440 and below that, with two provided screens*/
+@media screen and (min-width: 1039px) {
+  .section {
+    flex-direction: row;
+  }
+
+  .section__text {
+    padding: 120px 0;
+  }
+
+  .section__title {
+    font-size: 32px;
+    line-height: 42px;
+    padding: 0 100px;
+  }
+
+  .section__content {
+    font-size: 18px;
+    line-height: 23px;
+    padding: 0 105px;
+  }
+
+  .section__button {
+    font-size: 14px;
+    padding: 20px 55px;
+    line-height: 18px;
+  }
+}
+
+/* Second task styles */
+.blog {
+  padding: 64px 0;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.blog__title {
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.blog__subtitle {
+  font-family: "Rajdhani", sans-serif;
+  margin: 0 30px 16px 30px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.blog__view_all {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.blog__posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__post {
+  flex: 1;
+  margin: 32px 0 32px 0;
+}
+
+.blog__box {
+  position: relative;
+  max-width: 360px;
+  margin: auto;
+  padding: 0 35px 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog__pattern {
+  position: absolute;
+  z-index: 0;
+}
+
+.blog__pattern_t_l {
+  top: 0;
+  left: 20px;
+  width: 80px;
+}
+
+.blog__pattern_b_l {
+  bottom: -5px;
+  left: 5px;
+  width: 125px;
+}
+
+.blog__pattern_t_r {
+  top: -15px;
+  right: 35px;
+  width: 100px;
+}
+
+.blog__pattern_b_r {
+  bottom: -15px;
+  right: 5px;
+  width: 120px;
+}
+
+.blog__image {
+  z-index: 1;
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  max-width: 360px;
+  max-height: 360px;
+}
+
+.blog__post_title {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  margin: 32px auto 0 auto;
+  max-width: 360px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* I have estimated that 1240px is most optimal breakpoint to ensure 375px design and above that, and 1440 and below that, with two provided screens*/
+@media screen and (min-width: 1239px) {
+  .blog {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .blog__posts {
+    flex-direction: row;
+  }
+
+  .blog__post {
+    margin: 64px 0 0 0;
+  }
+
+  .blog__title {
+    font-size: 54px;
+    line-height: 59px;
+  }
+
+  .blog__subtitle {
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0 0 16px 0;
+  }
+
+  .blog__view_all {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .blog__box {
+    padding: 0;
+  }
+
+  .blog__post_title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .blog__pattern_t_l {
+    top: 0;
+    left: -50px;
+    width: auto;
+  }
+
+  .blog__pattern_b_l {
+    bottom: -15px;
+    left: -50px;
+    width: auto;
+  }
+
+  .blog__pattern_t_r {
+    top: -5px;
+    right: -5px;
+    width: auto;
+  }
+
+  .blog__pattern_b_r {
+    bottom: -15px;
+    right: -35px;
+    width: auto;
+  }
+}
