@@ -12,9 +12,9 @@ loadMore.addEventListener("click", () => {
 let countryPlaceholder = document.getElementById("country_placeholder");
 
 (async () => {
-  //I am just gonna put api key here straight forward
+  //I am just gonna put api key here straight forward, for this example, usually it would come from .env or some other approach
   const response = await fetch(
-    //This api takes ip address of client sending it by default, so it should work, and show different country based on location it is triggered
+    //This api takes ip address of client sending it by default, so it should work, and show different country based on location it is triggered from, in my case it says Bosnia and Herzegovina
     "https://api.ipgeolocation.io/ipgeo?apiKey=fc850190d0bb4033b335050390a64fb0"
   );
 
@@ -32,9 +32,12 @@ let countryPlaceholder = document.getElementById("country_placeholder");
 
 // Fourth task
 
-// I am not really sure what is asked of me specifically, and I am not that familiar with shopify liquid, but from my experience with other templating engines, and from what I could saw in figma, and my understanding of task described in email, it should be something like this:
+/* 
 
-/*
+I am not really sure what is asked for in this task specifically, 
+and I am not that familiar with shopify liquid, but from my experience with other template engines and similar platforms,
+and from what I could saw in figma, and my understanding of task described in email, it should be something like this:
+
 {% for row in section.blocks %}
   <div class="row">
     {% for column in row.blocks %}
@@ -64,4 +67,8 @@ let countryPlaceholder = document.getElementById("country_placeholder");
     {% endfor %}
   </div>
 {% endfor %}
+
+I have identified figma file as a section/row with number of columns, where each column can have icon, title, and text. 
+Content is looped through, values are dynamical, and their structure is conditionally rendered.
+
 */
